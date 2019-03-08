@@ -11,7 +11,7 @@ namespace Homework
         static void Main(string[] args)
         {
             //TASK 1
-            
+
             //Exercise 5
 
             //int[] sumNumbers = new int[5];
@@ -43,56 +43,66 @@ namespace Homework
 
             //Exercise 6
 
-            //string[] names = new string[5];
-            //int counter = 0;
+            string[] names = new string[10];
+            string userAnswer;
+            int index = 0;
 
-            //while (counter < 5)
-            //{
-            //    Console.Write("Please enter an name: ");
-            //    string name = Console.ReadLine();
-            //    names[counter] = name;
-            //    if (counter < names.Length - 1)
-            //    {
-            //        Console.WriteLine("You need to enter " + (5 - (counter + 1)) + " more name/s.");
-            //    }
-            //     counter++;
-            //}
+            do
+            {
 
-            //string result = "";
+                Console.Write("Do you want to enter a name(Y/N)? ");
+                string answer = Console.ReadLine();
+                userAnswer = answer;
 
-            //foreach (string name in names)
-            //{
-            //    result += name + " ";
-            //}
+                if (userAnswer == "y")
+                {
+                    Console.Write("Please enter a name: ");
+                    string name = Console.ReadLine();
+                    names[index] = name;
+                    index++;
+                }
 
-            //Console.WriteLine("The names you've entered: " + result);
-            //Console.ReadLine();
+            } while (userAnswer == "y");
+
+            if (names[0] != null)
+            {
+                string result = "";
+
+                foreach (string name in names)
+                {
+                    result += name + " ";
+                }
+
+                Console.WriteLine("The names you've entered: " + result);
+            }
+            else
+            {
+                Console.WriteLine("You haven't entered a single name.");
+            }
 
             //TASK 2 and 3
 
-            int[] integers = new int[20];
+            //int[] integers = new int[20];
 
-            int counter = 0;
+            //int counter = 0;
 
-            while (counter < 20)
-            {
-                Console.Write("Enter an number: ");
-                int userInput = int.Parse(Console.ReadLine());
-                integers[counter] = userInput;
-                if (counter < integers.Length - 1)
-                    Console.WriteLine("You need to enter " + (20 - (counter + 1)) + " more number/s.");
-                counter++;
-            }
+            //while (counter < 20)
+            //{
+            //    Console.Write("Enter an number: ");
+            //    int userInput = int.Parse(Console.ReadLine());
+            //    integers[counter] = userInput;
+            //    counter++;
+            //}
 
-            foreach (int integer in integers)
-            {
-                if (integer == 0)
-                    Console.WriteLine("Skipped");
-                else if (integer.ToString().Length == 3)
-                    break;
-                else
-                    Console.WriteLine(integer);
-            }
+            //foreach (int integer in integers)
+            //{
+            //    if (integer == 0)
+            //        Console.WriteLine("Skipped");
+            //    else if (integer.ToString().Length == 3)
+            //        break;
+            //    else
+            //        Console.WriteLine(integer);
+            //}
 
             Console.ReadLine();
         }
