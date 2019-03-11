@@ -36,7 +36,7 @@ namespace Homework
             //    sum += number;
             //}
 
-            //Console.WriteLine("The sum of all numbers you have enterd is " + sum);
+            //Console.WriteLine("The sum of all numbers you have entered is " + sum);
             //Console.ReadLine();
 
 
