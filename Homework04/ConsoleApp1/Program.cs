@@ -17,14 +17,8 @@ namespace ConsoleApp1
             RockstarFighter blanka = new RockstarFighter(170, 5, 4, 17);
 
             ryu.DoBoxing(mess);
-            ryu.DoStreet(mess);
-            ryu.DoBoxing(mess);
-            ryu.DoStreet(mess);
-            ryu.IsItReadyToFinish(mess);
-            blanka.DoBoxing(ryu);
+            mess.DoStreet(ryu);
             blanka.DoMuayThai(ryu);
-            blanka.DoStreet(ryu);
-            blanka.IsItReadyToFinish(ryu);
 
             Console.ReadLine();
 

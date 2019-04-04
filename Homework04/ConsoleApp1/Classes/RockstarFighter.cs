@@ -18,17 +18,20 @@ namespace ConsoleApp1.Classes
 
         public void DoStreet(Fighter opponent)
         {
-            opponent.TakeDamage(2 * Reputation);
+            opponent.TakeDamage(2 * Reputation * PowerPunch * Speed);
+            IsItReadyToFinish(opponent);
         }
 
         public void DoBoxing(Fighter opponent)
         {
-            opponent.TakeDamage(3 * Reputation);
+            opponent.TakeDamage(3 * Reputation * PowerPunch * Speed);
+            IsItReadyToFinish(opponent);
         }
 
         public void DoMuayThai(Fighter opponent)
         {
-            opponent.TakeDamage(4 * Reputation);
+            opponent.TakeDamage(4 * Reputation * PowerPunch * Speed);
+            IsItReadyToFinish(opponent);
         }
 
         public override void IsItReadyToFinish(Fighter opponent)
@@ -36,6 +39,13 @@ namespace ConsoleApp1.Classes
             if (opponent.IsDizzy())
             {
                 Finisher(opponent);
+            }
+            else
+            {
+                if (opponent.IsDizzy() != true)
+                {
+                    Console.WriteLine("The opponent was heavily beaten, but he still managed to survive this battle.");
+                }
             }
         }
 

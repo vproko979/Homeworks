@@ -18,7 +18,8 @@ namespace ConsoleApp1.Classes
 
         public void DoStreet(Fighter opponent)
         {
-            opponent.TakeDamage(2 * StreetCredit);
+            opponent.TakeDamage(2 * StreetCredit * PowerPunch * Speed);
+            IsItReadyToFinish(opponent);
         }
 
         public override void IsItReadyToFinish(Fighter opponent)
@@ -26,6 +27,13 @@ namespace ConsoleApp1.Classes
             if (opponent.IsDizzy())
             {
                 Finisher(opponent);
+            }
+            else
+            {
+                if (opponent.IsDizzy() != true)
+                {
+                    Console.WriteLine("The opponent was heavily beaten, but he still managed to survive this battle.");
+                }
             }
         }
 
