@@ -19,27 +19,18 @@ namespace ConsoleApp1.Classes
         public void DoStreet(Fighter opponent)
         {
             opponent.TakeDamage(2 * Experience * PowerPunch * Speed);
-            Finisher(opponent);
+            if (opponent.IsDizzy())
+            {
+                Finisher(opponent);
+            }            
         }
 
         public void DoBoxing(Fighter opponent)
         {
             opponent.TakeDamage(3 * Experience * PowerPunch * Speed);
-            Finisher(opponent);
-        }
-
-        public override void IsItReadyToFinish(Fighter opponent)
-        {
             if (opponent.IsDizzy())
             {
                 Finisher(opponent);
-            }
-            else
-            {
-                if (opponent.IsDizzy() != true)
-                {
-                    Console.WriteLine("The opponent was heavily beaten, but he still managed to survive this battle."); 
-                }
             }
         }
 

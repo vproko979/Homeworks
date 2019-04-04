@@ -19,15 +19,29 @@ namespace ConsoleApp1
             IsDrivable = isDrivable;
         }
 
-        partial void StartCar()
+        public void StartCar()
         {
-            Console.WriteLine("The car's engine has started, the car is in motion.");
-            IsDrivable = true;
+            if (IsDrivable == true)
+            {
+                Console.WriteLine("The car's engine has started, the car is in motion.");
+            }
         }
 
-        partial void StartLights()
+        public void StartLights()
         {
-            Console.WriteLine("Car's headlights are turned on.");
+            if (HaveKeys == true)
+            {
+                Console.WriteLine("Lights on the dashboard turns on.");
+            }
+        }
+
+        public void GetCarStats()
+        {
+           Console.WriteLine($"Car's info:\n" +
+                   $"Blarnd: {Brand}\n" +
+                   $"Model: {Model}\n" +
+                   $"Color: {Color}\n" +
+                   $"Driving status: {(IsDrivable ? "The car is in drivable condition" : "The car has flat tire/s")}");
         }
     }
 }

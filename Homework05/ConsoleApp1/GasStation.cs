@@ -10,13 +10,25 @@ namespace ConsoleApp1
     {
         public static void Refill(Car car)
         {
-            Console.WriteLine("Car's reservoir is full to the top.");
-            car.Fuel = car.MaxFuel;
+            Random random = new Random();
+            int randomNumber = random.Next(car.MaxFuel - car.Fuel);
+
+            if (car.Fuel + randomNumber >= car.MaxFuel)
+            {
+                car.Fuel = car.MaxFuel;
+                Console.WriteLine("Car's reservoir is full to the top.");
+            }
+            else if (car.Fuel + randomNumber < car.MaxFuel)
+            {
+                car.Fuel += randomNumber;
+                Console.WriteLine($"The car was filled with {randomNumber} liters of fuel.");
+            }
+            
         }
 
         public static void PumpUpTires(Car car)
         {
-            Console.WriteLine("Car's tires are inflated.");
+            Console.WriteLine("Car's tires are inflated, you can drive the car now");
             car.IsDrivable = true;
         }
     }

@@ -15,9 +15,5 @@ namespace ConsoleApp1
         public int MaxFuel { get; set; }
         public bool HaveKeys { get; set; }
         public bool IsDrivable { get; set; }
-
-        partial void StartCar();
-
-        partial void StartLights();
     }
 }

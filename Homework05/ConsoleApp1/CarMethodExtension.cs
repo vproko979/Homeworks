@@ -10,9 +10,19 @@ namespace ConsoleApp1
     {
         public static void Drive(this Car car, string place)
         {
+            Random random = new Random();
+            int randomNumber = random.Next(0, car.MaxFuel);
+
             if (car.IsDrivable)
             {
-                car.Fuel -= 30;
+                if (car.Fuel - randomNumber <= 0)
+                {
+                    car.Fuel = 0;
+                }
+                else
+                {
+                    car.Fuel -= randomNumber;
+                }
                 Console.WriteLine($"The {car.Brand} is heading towards {place}.");
             }
             else
@@ -22,15 +32,6 @@ namespace ConsoleApp1
                     Console.WriteLine("The car can't be driven, you can't reach to your destination");
                 }
             }
-        }
-
-        public static string GetCarStats(this Car car)
-        {
-            return $"Car's info:\n" +
-                   $"Blarnd: {car.Brand}\n" +
-                   $"Model: {car.Model}\n" +
-                   $"Color: {car.Color}\n" +
-                   $"Driving status: {(car.IsDrivable ? "The car is in drivable condition" : "The car has flat tire/s")}";
         }
     }
 }

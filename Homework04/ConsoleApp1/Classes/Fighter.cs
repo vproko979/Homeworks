@@ -41,7 +41,7 @@ namespace ConsoleApp1.Classes
             return false;
         }
 
-        public abstract void IsItReadyToFinish(Fighter opponent);
+        //public abstract void IsItReadyToFinish(Fighter opponent);
 
         protected abstract void Finisher(Fighter opponent);
     }
