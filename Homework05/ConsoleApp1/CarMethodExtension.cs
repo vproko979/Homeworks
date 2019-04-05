@@ -13,7 +13,7 @@ namespace ConsoleApp1
             Random random = new Random();
             int randomNumber = random.Next(0, car.MaxFuel);
 
-            if (car.IsDrivable)
+            if (car.IsDrivable && car.Fuel > 0)
             {
                 if (car.Fuel - randomNumber <= 0)
                 {
@@ -27,9 +27,9 @@ namespace ConsoleApp1
             }
             else
             {
-                if(car.IsDrivable == false)
+                if(car.IsDrivable == false || car.Fuel == 0)
                 {
-                    Console.WriteLine("The car can't be driven, you can't reach to your destination");
+                    Console.WriteLine($"The {car.Brand} can't be driven, you can't reach to your destination");
                 }
             }
         }

@@ -12,8 +12,10 @@ namespace ConsoleApp1
         {
             Car car1 = new Car("Volvo", "XC40", "White", 179, true, true);
             Car car2 = new Car("Volkswagen", "Polo", "Red", 120, false, false);
+            Car car3 = new Car("Honda", "Civic", "Red", 0, false, true);
+            Car car4 = new Car("Audi", "Q8", "Red", 310, false, false);
 
-            car1.GetCarStats();
+            Car.GetCarStats(car1);
             Console.WriteLine();
             Console.WriteLine("Fuel before driving " + car1.Fuel);
             Console.WriteLine("----------------------------------");
@@ -25,7 +27,7 @@ namespace ConsoleApp1
             GasStation.Refill(car1);
             Console.WriteLine("Fuel " + car1.Fuel);
             Console.WriteLine("----------------------------------");
-            car2.GetCarStats();
+            Car.GetCarStats(car2);
             Console.WriteLine();
             car2.Drive("Downtown");
             Console.WriteLine("Car2 fuel is " + car2.Fuel);
@@ -36,6 +38,12 @@ namespace ConsoleApp1
             Console.WriteLine("----------------------------------");
             GasStation.Refill(car2);
             Console.WriteLine("Car2 fuel after refilling: " + car2.Fuel);
+            Console.WriteLine();
+            car3.StartCar();
+            car3.Drive("Center");
+            car4.StartCar();
+            car4.Drive("Center");
+
 
             Console.ReadLine();
         }

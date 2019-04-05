@@ -42,7 +42,6 @@ namespace ConsoleApp1.Classes
 
         protected override void Finisher(Fighter opponent)
         {
-            opponent.TakeDamage();
             Console.WriteLine("The opponent was finished with a fatal combination of punches, elbows and leg kicks. His recovery period gonna last 1-3 weeks.");
         }
     }

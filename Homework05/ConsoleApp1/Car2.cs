@@ -21,9 +21,16 @@ namespace ConsoleApp1
 
         public void StartCar()
         {
-            if (IsDrivable == true)
+            if (IsDrivable == true && Fuel > 0)
             {
                 Console.WriteLine("The car's engine has started, the car is in motion.");
+            }
+            else if (IsDrivable == false && Fuel > 0)
+            {
+                Console.WriteLine("You have petrol, but it seems you got a flat tire, pump/change your tire");
+            }else if (IsDrivable == true && Fuel == 0)
+            {
+                Console.WriteLine("Car reservoir is empty, you should visit a gas station");
             }
         }
 
@@ -35,13 +42,12 @@ namespace ConsoleApp1
             }
         }
 
-        public void GetCarStats()
+        public static void GetCarStats(Car car)
         {
            Console.WriteLine($"Car's info:\n" +
-                   $"Blarnd: {Brand}\n" +
-                   $"Model: {Model}\n" +
-                   $"Color: {Color}\n" +
-                   $"Driving status: {(IsDrivable ? "The car is in drivable condition" : "The car has flat tire/s")}");
+                   $"Blarnd: {car.Brand}\n" +
+                   $"Model: {car.Model}\n" +
+                   $"Color: {car.Color}");
         }
     }
 }

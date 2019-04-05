@@ -42,7 +42,6 @@ namespace ConsoleApp1.Classes
         }
 
         //public abstract void IsItReadyToFinish(Fighter opponent);
-
         protected abstract void Finisher(Fighter opponent);
     }
 }

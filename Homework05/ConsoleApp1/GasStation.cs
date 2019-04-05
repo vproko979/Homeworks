@@ -16,19 +16,19 @@ namespace ConsoleApp1
             if (car.Fuel + randomNumber >= car.MaxFuel)
             {
                 car.Fuel = car.MaxFuel;
-                Console.WriteLine("Car's reservoir is full to the top.");
+                Console.WriteLine($"{car.Brand} reservoir is full to the top.");
             }
             else if (car.Fuel + randomNumber < car.MaxFuel)
             {
                 car.Fuel += randomNumber;
-                Console.WriteLine($"The car was filled with {randomNumber} liters of fuel.");
+                Console.WriteLine($"The {car.Brand} was filled with {randomNumber} liters of fuel.");
             }
             
         }
 
         public static void PumpUpTires(Car car)
         {
-            Console.WriteLine("Car's tires are inflated, you can drive the car now");
+            Console.WriteLine($"{car.Brand} tires are inflated, you can drive the car now");
             car.IsDrivable = true;
         }
     }
