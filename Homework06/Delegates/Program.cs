@@ -59,8 +59,7 @@ namespace Delegates
             Console.WriteLine($"Removed value at index 2 is \"{myArray.Remove(2)}\"");
 
             myArray.DisplayValues();
-            int[] numbers = new int[] { 1, 2, 3, 4, 5 };
-            Console.WriteLine(numbers[2]);
+
             Console.ReadLine();
         }
     }
