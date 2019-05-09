@@ -1,0 +1,8 @@
+$ Date: 09-May-19 20:19:17 Name: John Doe, Total amount: 7895.00, Products:  Tuborg 95.00 Persil 290.00 Wilkinson 978.00 Lacalut 195.00 Nescafe 75.00
+# Date: 09-May-19 20:20:36 Name: John Doe, Total amount: 330.00, Products:  Milka 75.00 Knorr 45.00
+# Date: 09-May-19 21:03:44 Name: John Doe, Total amount: 195.00, Products:  Nestle 65.00
+$ Date: 09-May-19 21:30:38 Name: Bob Bobsky, Total amount: 3677.00, Products:  Johnnie Walker 3247.00 Nestle 65.00 Maggi 40.00
+$ Date: 09-May-19 21:38:42 Name: Mike Tyson, Total amount: 17468.00, Products:  Johnnie Walker 3247.00 Nestle 65.00 Jack Daniel's 2294.00
+# Date: 09-May-19 21:51:22 Name: Mike Tyson, Total amount: 65.00, Products:  Nestle 65.00
+$ Date: 09-May-19 22:20:31 Name: John Doe, Total amount: 4677.00, Products:  Nestle 65.00 Lacalut 195.00 Johnnie Walker 3247.00
+$ Date: 09-May-19 22:40:24 Name: John Doe, Total amount: 360417.00, Products:  Johnnie Walker 3247.00

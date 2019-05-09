@@ -1,0 +1,179 @@
+[
+  {
+    "Name": "TINEX",
+    "Products": [
+      {
+        "Code": 1,
+        "Name": "Tuborg",
+        "Price": 95.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 2,
+        "Name": "Milka",
+        "Price": 75.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 3,
+        "Name": "Persil",
+        "Price": 290.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 4,
+        "Name": "Knorr",
+        "Price": 45.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 5,
+        "Name": "Wilkinson",
+        "Price": 978.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 6,
+        "Name": "Nivea",
+        "Price": 210.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 7,
+        "Name": "Lacalut",
+        "Price": 195.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 8,
+        "Name": "Johnnie Walker",
+        "Price": 3247.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 9,
+        "Name": "Nescafe",
+        "Price": 75.00,
+        "Quantity": 0
+      }
+    ]
+  },
+  {
+    "Name": "Vero",
+    "Products": [
+      {
+        "Code": 10,
+        "Name": "Heineken",
+        "Price": 85.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 11,
+        "Name": "Nestle",
+        "Price": 65.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 12,
+        "Name": "Tide",
+        "Price": 270.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 13,
+        "Name": "Maggi",
+        "Price": 40.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 14,
+        "Name": "Gillette",
+        "Price": 835.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 15,
+        "Name": "Dove",
+        "Price": 105.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 16,
+        "Name": "Colgate",
+        "Price": 235.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 17,
+        "Name": "Jack Daniel's",
+        "Price": 2294.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 18,
+        "Name": "Jacobs",
+        "Price": 122.00,
+        "Quantity": 0
+      }
+    ]
+  },
+  {
+    "Name": "KAM",
+    "Products": [
+      {
+        "Code": 19,
+        "Name": "Amstel",
+        "Price": 90.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 20,
+        "Name": "Toblerone",
+        "Price": 70.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 21,
+        "Name": "Ariel",
+        "Price": 280.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 22,
+        "Name": "Podravka",
+        "Price": 35.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 23,
+        "Name": "Balea",
+        "Price": 435.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 24,
+        "Name": "Old Spice",
+        "Price": 105.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 25,
+        "Name": "Oral-B",
+        "Price": 249.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 26,
+        "Name": "Jameson",
+        "Price": 2337.00,
+        "Quantity": 0
+      },
+      {
+        "Code": 27,
+        "Name": "Franck",
+        "Price": 79.00,
+        "Quantity": 0
+      }
+    ]
+  }
+]
