@@ -1,0 +1,12 @@
+CREATE TABLE GradeDetails (
+	ID INT IDENTITY(1,1) NOT NULL,
+	GradeID INT NOT NULL,
+	AchievementTypeID SMALLINT NOT NULL,
+	AchievementPoints SMALLINT NOT NULL,
+	AchievementMaxPoints SMALLINT NOT NULL,
+	AchievementDate DATE NOT NULL,
+CONSTRAINT PK_GradeDetails PRIMARY KEY CLUSTERED 
+(
+	ID ASC
+))
+GO
