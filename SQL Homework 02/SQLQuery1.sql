@@ -26,7 +26,7 @@ WHERE LastName LIKE 'T%'
 
 SELECT *
 FROM Student
-WHERE EnrolledDate LIKE '1998-01%'
+WHERE EnrolledDate >= '1998-01-01' AND EnrolledDate < '1998-02-01'
 
 -- Find all Students with LastName starting With ‘J’ enrolled in January/1998
 
