@@ -87,7 +87,7 @@ WHERE ID = 1
 GO
 
 CREATE FUNCTION dbo.fn_StudentsWhoPassed (@TeacherID SMALLINT, @CourseID SMALLINT)
-RETURNS @TableResult table (FirstName NVARCHAR(50), LastName NVARCHAR(50), Grade TINYINT, CreateDate DATETIME)
+RETURNS @TableResult TABLE (FirstName NVARCHAR(50), LastName NVARCHAR(50), Grade TINYINT, CreateDate DATETIME)
 AS 
 BEGIN
 
