@@ -50,7 +50,8 @@ DROP TABLE #MaleStudentsOnA
 
 SELECT FirstName, LastName
 FROM Teacher
-WHERE LEFT(FirstName, 3) = LEFT(LastName, 3)
+WHERE LEN(FirstName) < 5 AND
+LEFT(FirstName, 3) = LEFT(LastName, 3)
 
 --  Declare scalar function (fn_FormatStudentName) for retrieving the Student description for specific StudentId in the following format:
 --  * StudentCardNumber without “sc-”
