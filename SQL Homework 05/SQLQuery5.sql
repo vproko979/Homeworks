@@ -47,8 +47,6 @@ CREATE OR ALTER PROCEDURE dbo.CreateGradeDetail(@GradeID INT, @AchievementTypeID
 AS
 BEGIN
 
-DECLARE @GradePoints DECIMAL(18,2)
-
 BEGIN TRY
 	INSERT INTO dbo.GradeDetails(GradeID, AchievementTypeID, AchievementPoints, AchievementMaxPoints, AchievementDate)
 	VALUES (@GradeID, @AchievementTypeID, @AchievementPoints, @AchievementMaxPoints, @AchievementDate)
@@ -67,14 +65,6 @@ SELECT
     ,ERROR_LINE() AS ErrorLine  
     ,ERROR_MESSAGE() AS ErrorMessage;
 END CATCH;
-
-SET @GradePoints =
-	(
-		SELECT SUM(AchievementPoints / AchievementMaxPoints * ACT.ParticipationRate)
-		FROM dbo.GradeDetails GD
-		INNER JOIN dbo.AchievementType ACT ON ACT.ID = GD.AchievementTypeID
-		WHERE GD.GradeID = @GradeID
-	)
 
 END
 GO
