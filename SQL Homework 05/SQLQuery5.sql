@@ -52,6 +52,11 @@ DECLARE @GradePoints DECIMAL(18,2)
 BEGIN TRY
 	INSERT INTO dbo.GradeDetails(GradeID, AchievementTypeID, AchievementPoints, AchievementMaxPoints, AchievementDate)
 	VALUES (@GradeID, @AchievementTypeID, @AchievementPoints, @AchievementMaxPoints, @AchievementDate)
+
+	SELECT SUM(CAST(GD.AchievementPoints AS DECIMAL(5,2)) / CAST(GD.AchievementMaxPoints AS DECIMAL(5,2)) * ACT.ParticipationRate) AS GradePoints
+	FROM GradeDetails AS GD
+	INNER JOIN AchievementType AS ACT ON GD.AchievementTypeID = ACT.ID
+	WHERE GD.GradeID = @GradeID
 END TRY
 BEGIN CATCH
 SELECT  
@@ -64,23 +69,18 @@ SELECT
 END CATCH;
 
 SET @GradePoints =
-(
-	SELECT SUM(AchievementPoints / AchievementMaxPoints * A.ParticipationRate)
-	FROM dbo.GradeDetails GD
-	INNER JOIN dbo.AchievementType A ON A.ID = GD.AchievementTypeID
-)
-
-SELECT S.FirstName AS Name, S.LastName AS Surname, CONVERT(INT, @GradePoints) AS [Grade Points]
-FROM dbo.GradeDetails GD
-INNER JOIN Grade G ON G.ID = GD.GradeID
-INNER JOIN Student S ON S.ID = G.StudentID
-WHERE GD.GradeID = @GradeID
+	(
+		SELECT SUM(AchievementPoints / AchievementMaxPoints * ACT.ParticipationRate)
+		FROM dbo.GradeDetails GD
+		INNER JOIN dbo.AchievementType ACT ON ACT.ID = GD.AchievementTypeID
+		WHERE GD.GradeID = @GradeID
+	)
 
 END
 GO
 
 EXECUTE dbo.CreateGradeDetail
-@GradeID = 20122, 
+@GradeID = 16030, 
 @AchievementTypeID = 5, 
 @AchievementPoints = 79, 
 @AchievementMaxPoints = 100, 
