@@ -1,0 +1,23 @@
+﻿@model List<MovieModel>
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<h3>MOVIES:</h3>
+<span><b>@Html.ActionLink("Add movie", "Add")</b></span>
+<br />
+<br />
+<table border="0">
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <td><b>@movie.Title</b></td>
+            <td>&nbsp;(@movie.Year)</td>
+            <td>&nbsp;&nbsp;&nbsp;<b>@Html.ActionLink("Details", "MovieDetails", new { id = movie.Id })</b></td>
+            <td>&nbsp;&nbsp;&nbsp;<b>@Html.ActionLink("Edit", "Edit", new { id = movie.Id })</b></td>
+            <td>&nbsp;&nbsp;&nbsp;<b>@Html.ActionLink("Delete", "Delete", new { id = movie.Id })</b></td>
+            <td>&nbsp;&nbsp;&nbsp;<b>@Html.ActionLink("Download Info", "DownloadFile", new { id = movie.Id})</b></td>
+        </tr>
+    }
+</table>
+<br />

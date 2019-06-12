@@ -1,0 +1,32 @@
+﻿@model MovieModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+@using (@Html.BeginForm("SaveChanges", "Menu", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+    @Html.HiddenFor(m => m.Id)
+    <table border="0">
+        <tr>
+            <td>@Html.LabelFor(m => m.Title, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(m => m.Title, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Genre, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(m => m.Genre, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Year, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(m => m.Year, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Price, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(m => m.Price, new { @class = "form-label" })</td>
+        </tr>
+    </table>
+    <br />
+    <input value="Save" type="submit" />
+}
