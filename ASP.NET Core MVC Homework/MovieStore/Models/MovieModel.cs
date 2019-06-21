@@ -16,7 +16,7 @@ namespace MovieStore.Models
         public string Genre { get; set; }
         [Required(ErrorMessage = "Year is required")]
         public int Year { get; set; }
-        [Range(5, 10, ErrorMessage = "Price is required")]
+        [Range(5, 10, ErrorMessage = "The price should be in range from 5 to 10")]
         public decimal Price { get; set; }
     }
 }
