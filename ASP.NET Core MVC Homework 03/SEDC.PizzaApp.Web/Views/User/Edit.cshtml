@@ -1,0 +1,44 @@
+﻿@using SEDC.PizzaApp.Domain
+@model User
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Update", "User", FormMethod.Get))
+{
+    @Html.HiddenFor(u => u.Id)
+    <table border="0">
+        <tr>
+            <td>@Html.LabelFor(p => p.FirstName, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.FirstName, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(p => p.LastName, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.LastName, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(p => p.Email, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.Email, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(p => p.Address, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.Address, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(p => p.Phone, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.Phone, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(p => p.Password, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.Password, new { @class = "form-label" })</td>
+        </tr>
+    </table>
+    <br />
+    <input value="Save" type="submit" />
+    <br />
+    <br />
+    <span><b>@Html.ActionLink("Back", "Index")</b></span>
+}
+

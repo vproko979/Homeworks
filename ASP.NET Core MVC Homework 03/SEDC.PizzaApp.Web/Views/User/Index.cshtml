@@ -1,0 +1,42 @@
+﻿@using SEDC.PizzaApp.Domain;
+@model List<User>
+@{
+    ViewData["Title"] = "Users List";
+}
+
+<h2>Users</h2>
+
+<div class="container">
+    <a asp-action="Create" asp-controller="User" class="btn btn-primary">Create new user</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.FirstName @user.LastName</td>
+                        <td>@user.Address</td>
+                        <td>@user.Email</td>
+                        <td>@user.Phone</td>
+                        <td>
+                            <a asp-action="Details" asp-controller="User" asp-route-id="@user.Id">Details</a> |
+                            <a asp-action="Edit" asp-controller="User" asp-route-id="@user.Id">Edit</a> |
+                            <a asp-action="Delete" asp-controller="User" asp-route-id="@user.Id">Delete</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

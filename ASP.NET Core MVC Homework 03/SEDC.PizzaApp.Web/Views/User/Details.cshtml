@@ -1,0 +1,37 @@
+﻿@using SEDC.PizzaApp.Domain
+@model User
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+<br />
+@Html.HiddenFor(u => u.Id)
+<table border="0">
+    <tr>
+        <td>FirstName:</td>
+        <td><b>@Model.FirstName</b></td>
+    </tr>
+    <tr>
+        <td>LastName:</td>
+        <td><b>@Model.LastName</b></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><b>@Model.Email</b></td>
+    </tr>
+    <tr>
+        <td>Address:</td>
+        <td><b>@Model.Address</b></td>
+    </tr>
+    <tr>
+        <td>Phone:</td>
+        <td><b>@Model.Phone</b></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><b>@Model.Password</b></td>
+    </tr>
+</table>
+<br />
+<span><b>@Html.ActionLink("Back", "Index")</b></span>

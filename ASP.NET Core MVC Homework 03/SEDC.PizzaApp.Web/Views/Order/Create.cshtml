@@ -1,0 +1,62 @@
+﻿@using SEDC.PizzaApp.Domain
+@model Order
+@{
+    ViewData["Title"] = "Create";
+    List<Pizza> pizzas = (List<Pizza>)ViewData["Pizzas"];
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Order", FormMethod.Post))
+{
+    <table border="0">
+        <tr>
+            <td>@Html.LabelFor(o => o.User.FirstName, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(o => o.User.FirstName, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.User.LastName, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(o => o.User.LastName, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.User.Address, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(o => o.User.Address, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.User.Phone, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(o => o.User.Phone, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td><b>Pizza</b></td>
+            <td>
+                <select  name="Pizzas[0].Name" id="Pizzas[0].Name">
+                    
+                    @for (int i = 0; i < pizzas.Count; i++)
+                    {
+                        <option value=@pizzas[i].Name>@pizzas[i].Name</option>
+
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Price</b></td>
+            <td>
+                <select  name="Pizzas[0].Price" id="Pizzas[0].Price">
+                    
+                    @for (int i = 0; i < pizzas.Count; i++)
+                    {
+                        <option value=@pizzas[i].Price>@pizzas[i].Price</option>
+
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.Pizzas[0].Size, new { @class = "form-label" })</td>
+            <td>@Html.DropDownList("PizzaSize", Html.GetEnumSelectList<PizzaSize>(), "Select Size", new { @class = "form-control" })</td>
+        </tr>
+    </table>
+    <br />
+    <input value="Save" type="submit" />
+}

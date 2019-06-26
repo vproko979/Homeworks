@@ -1,0 +1,29 @@
+﻿@using SEDC.PizzaApp.Domain
+@using System.Globalization
+@model Order
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+@Html.HiddenFor(o => o.Id)
+<table border="0">
+    <tr>
+        <td>Name: <b>@Model.User.FirstName @Model.User.LastName</b></td>
+    </tr>
+    <tr>
+        <td>Pizza/s:</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                @foreach (var pizza in Model.Pizzas)
+                {
+                    <li>Name: <b>@pizza.Name</b>   Prize: <b>@pizza.GetPrice(pizza.Size).ToString("C", new CultureInfo("mk-MK"))</b></li>
+                }
+            </ul>
+        </td>
+    </tr>
+</table>
+<br />
+<span><b>@Html.ActionLink("Back", "Index")</b></span>

@@ -1,0 +1,28 @@
+﻿@using SEDC.PizzaApp.Domain
+@model Pizza
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Update", "Pizza", FormMethod.Get))
+{
+    @Html.HiddenFor(p => p.Id)
+    <table border="0">
+        <tr>
+            <td>@Html.LabelFor(p => p.Name, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.Name, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(p => p.Description, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.Description, new { @class = "form-label" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(p => p.Price, new { @class = "form-label" })</td>
+            <td>@Html.TextBoxFor(p => p.Price, new { @class = "form-label" })</td>
+        </tr>
+    </table>
+    <br />
+    <input value="Save" type="submit" />
+}

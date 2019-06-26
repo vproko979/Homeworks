@@ -1,0 +1,47 @@
+﻿@using SEDC.PizzaApp.Domain
+@using System.Globalization
+@model List<Order>
+@{
+    ViewData["Title"] = "List of orders";
+}
+
+<h2>Orders</h2>
+
+<div class="container">
+    <a asp-action="Create" asp-controller="Order" class="btn btn-primary">Create new order</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Pizzas</th>
+                <th>Total Price(tip included)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var order in Model)
+                {
+                    <tr>
+                        <td>@order.User.FirstName @order.User.LastName</td>
+                        <td>
+                            @{
+                                foreach (Pizza pizza in order.Pizzas)
+                                {
+                                    
+                                    <span><b>Name:</b> @pizza.Name&nbsp;&nbsp;<b>Price:</b> @pizza.GetPrice(pizza.Size).ToString("C", new CultureInfo("mk-MK"))</span><br />
+                                }
+                            }
+                        </td>
+                        <td>@order.TotalPrice.ToString("C", new CultureInfo("mk-MK"))</td>
+                        <td>
+                            <a asp-action="Details" asp-controller="Order" asp-route-id="@order.Id">Details</a> |
+                            <a asp-action="Delete" asp-controller="Order" asp-route-id="@order.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+

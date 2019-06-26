@@ -1,0 +1,40 @@
+﻿@using SEDC.PizzaApp.Domain
+@using System.Globalization
+@model Pizza
+@{
+    ViewData["Title"] = "Update";
+    var small = SEDC.PizzaApp.Domain.PizzaSize.Small;
+    var medium = SEDC.PizzaApp.Domain.PizzaSize.Medium;
+    var large = SEDC.PizzaApp.Domain.PizzaSize.Large;
+}
+
+<h2>Updated info to:</h2>
+<br />
+@Html.HiddenFor(p => p.Id)
+<table border="0">
+    <tr>
+        <td>Name:</td>
+        <td><b>@Model.Name</b></td>
+    </tr>
+    <tr>
+        <td>Description:</td>
+        <td><b>@Model.Description</b></td>
+    </tr>
+    <tr>
+        <td>Prices:</td>
+    </tr>
+    <tr>
+        <td>Small:</td>
+        <td><b>@Model.GetPrice(small).ToString("C", new CultureInfo("mk-MK"))</b></td>
+    </tr>
+    <tr>
+        <td>Medium:</td>
+        <td><b>@Model.GetPrice(medium).ToString("C", new CultureInfo("mk-MK"))</b></td>
+    </tr>
+    <tr>
+        <td>Large:</td>
+        <td><b>@Model.GetPrice(large).ToString("C", new CultureInfo("mk-MK"))</b></td>
+    </tr>
+</table>
+<br />
+<span><b>@Html.ActionLink("Back", "Index")</b></span>
