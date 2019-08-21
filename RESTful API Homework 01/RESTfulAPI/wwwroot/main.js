@@ -12,8 +12,8 @@ const showButton2 = document.getElementById("show2");
 const number = document.getElementById("number");
 const number2 = document.getElementById("number2");
 
-let port = 50302;
-let url = "http://localhost:" + port + "/api/values";
+let port = 49740;
+let url = "http://localhost:" + port + "/api/users";
 
 function displayResult(data) {
     document.getElementsByClassName("result")[0].style.display = "block";
@@ -58,14 +58,14 @@ let getAllUsers = async (div) => {
 }
 
 let isItAdult = async (div) => {
-    let url = "http://localhost:" + port + "/api/values/adults/" + number2.value;
+    let url = "http://localhost:" + port + "/api/users/adults/" + number2.value;
     let response = await fetch(url);
     let result = await response.text();
     displayResult3(result);
 }
 
 let getUser = async (div) => {
-    let url = "http://localhost:" + port + "/api/values/" + number.value;
+    let url = "http://localhost:" + port + "/api/users/" + number.value;
     let response = await fetch(url);
     let result = await response.json();
     displayResult2(result);
