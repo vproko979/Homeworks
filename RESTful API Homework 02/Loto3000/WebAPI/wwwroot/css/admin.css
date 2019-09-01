@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+#main {
+  margin-top: 7%;
+}
+
+#admin{
+  padding: 7px;
+  font-weight: bolder;
+}
+
+#navigation{
+  height: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#winners,
+#reg-admin,
+#prize,
+#start-session,
+#check-session,
+#log-out {
+  width: 139px;
+  height: 30px;
+  display: block;
+  border-radius: 7%;
+  color: white;
+  background-color: rgb(49, 187, 107);
+  margin: 7px 1%;
+}
+
+#title {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.number {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  font-size: 70px;
+  text-align: center;
+}
+
+#draw,
+#publish {
+  width: 130px;
+  height: 30px;
+  display: block;
+  border-radius: 7%;
+  color: white;
+  background-color: rgb(49, 187, 107);
+  margin: 13px 1%;
+}
+
+#result3,
+#result2,
+#result {
+  font-weight: bolder;
+}
+
+#winners-list,
+#prizes,
+#form {
+  height: 80%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+label[for="hits"],
+#hits,
+label[for="name"],
+#name {
+  margin-top: 27px;
+}
+
+#close3,
+#close2,
+#add,
+#close,
+#register {
+  width: 90px;
+  height: 30px;
+  display: block;
+  border-radius: 7%;
+  color: white;
+  background-color: rgb(49, 187, 107);
+  margin: 27px 40%;
+}
+
+#result2 {
+  font-weight: bolder;
+}
+
+label {
+  float: left;
+  text-align: right;
+  margin-right: 15px;
+  width: 167px;
+}
+
+th,
+td {
+  padding: 7px;
+  text-align: center;
+  vertical-align: middle;
+}

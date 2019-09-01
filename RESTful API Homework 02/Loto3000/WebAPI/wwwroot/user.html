@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+    <div id="navigation">
+        <div id="user"></div>
+        <div id="buttons">
+            <input type="button" id="winners" value="Check winners">
+            <input type="button" id="log-out" value="Log Out">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="winners-list"></div>
+    <div id="main">
+        <!-- <h1>Welcome to user's page</h1> -->
+        <h3>Status:&nbsp;<span id="status"></span></h3>
+        <br>
+        <h1>Choose your lucky numbers. Good Luck!</h1>
+        <div id="numbers">
+            <input type="number" id="number1" min="1" max="37" value="1">
+            <input type="number" id="number2" min="1" max="37" value="1">
+            <input type="number" id="number3" min="1" max="37" value="1">
+            <input type="number" id="number4" min="1" max="37" value="1">
+            <input type="number" id="number5" min="1" max="37" value="1">
+            <input type="number" id="number6" min="1" max="37" value="1">
+            <input type="number" id="number7" min="1" max="37" value="1">
+        </div>
+        <br>
+        <input type="button" id="send" value="Send"></input>
+        <div id="result"></div>
+    </div>
+    
+
+    <script src="js/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrator</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div id="navigation">
+        <div id="admin"></div>
+        <div id="buttons">
+            <input type="button" id="reg-admin" value="Register Admin">
+            <input type="button" id="prize" value="Add Prize">
+            <input type="button" id="start-session" value="Start Session">
+            <input type="button" id="check-session" value="Session Status">
+            <input type="button" id="winners" value="Check Winners">
+            <input type="button" id="log-out" value="Log Out">
+        </div>
+    </div>
+    
+    <div id="main">
+        <div id="form">
+            <h1>Registration</h1>
+            <form>
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <br>
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname" id="surname">
+                    <br>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <br>
+                    <label for="password">Confirm password</label>
+                    <input type="password" name="confirm-password" id="confirm-password">
+                    <br>
+                    <input type="submit" id="register">
+                    <button id="close">Close</button>
+                </fieldset>
+            </form>
+            <br>
+            <div id="result2"></div>
+        </div>
+        <div id="prizes">
+            <h1>Add/Update prize</h1>
+            <form>
+                <fieldset>
+                    <label for="hits">Number of hits</label>
+                    <input type="number" name="name" id="hits" min="3" max="7">
+                    <br>
+                    <label for="prize2">The prize</label>
+                    <input type="text" name="surname" id="prize2">
+                    <br>
+                    <button id="add">Add</button>
+                    <button id="close2">Close</button>
+                </fieldset>
+            </form>
+            <br>
+            <div id="result3"></div>
+        </div>
+        <div id="winners-list"></div>
+        <div id="title">
+            <h1 id="response"></h1>
+            <br>
+            <div class="numbers">
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+                <div class="number"></div>
+            </div>
+            <br>
+            <input type="button" id="draw" value="DRAW NUMBERS">
+            <input type="button" id="publish" value="PUBLISH">
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

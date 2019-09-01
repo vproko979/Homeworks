@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+        <div id="buttons">
+            <input type="button" id="return" value="Return">
+            <input type="button" id="register" value="Register">
+        </div>
+        <div id="form">
+            <h1>Sign In</h1>
+            <form method="POST">
+                <fieldset>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <br>
+                    <input type="button" id="log-in" value="Log In">
+                </fieldset>
+            </form>
+            <br>
+            <div class="response">
+                <span id="response"></span>
+            </div>
+        </div>
+        
+
+    <script src="js/login.js"></script>
+</body>
+</html>
