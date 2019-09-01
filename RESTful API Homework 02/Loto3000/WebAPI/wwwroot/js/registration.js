@@ -22,7 +22,6 @@ regButton.addEventListener("click", (e) => {
         ConfirmPassword: document.getElementById("confirm-password").value,
         FirstName: document.getElementById("name").value,
         LastName: document.getElementById("surname").value
-        // Role: "User"
     }
     registerUser(data);
 })
@@ -40,29 +39,3 @@ async function registerUser(data) {
 
     document.getElementById("result").innerText = result;
 }
-
-// function luckyNumbers() {
-
-//     let count = 0;
-//     let numbers = [];
-    
-//     while (count <= 7) {
-//         let luckyNumber = Math.ceil(Math.random() * 37)
-//         if (numbers.indexOf(luckyNumber) === -1) {
-//             numbers.push(luckyNumber);
-//             count++;
-//         }
-//     }
-    
-//     return numbers.sort((a, b) => a - b);
-// }
-
-// // * It turn number into string, before saving into database
-// let numbersIntoString = numbers => numbers.sort((a, b) => a - b).join(",");
-
-// // * Turning string of numbers into array of numbers
-// let stringIntoNumbers = numbers => numbers.split(",").map(number => Number(number));
-
-// console.log(luckyNumbers());
-// console.log(numbersIntoString(luckyNumbers()));
-// console.log(stringIntoNumbers(numbersIntoString(luckyNumbers())));

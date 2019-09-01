@@ -173,7 +173,6 @@ async function lastSession() {
 }
 
 function generateLuckyNumbers() {
-    debugger
     let count = 0;
     let numbers = [];
     
@@ -224,7 +223,6 @@ publishButton.addEventListener("click", () => {
 });
 
 async function getTheWinnersList() {
-    debugger
     let response = await fetch(`http://localhost:${port}/api/users/winners`)
     let result = await response.text();
     displayWinners(result);
@@ -257,8 +255,7 @@ function winnersTittle(message){
 }
 
 function displayWinners(data) {
-    
-    console.log(data);
+
     if (data.includes("No winners")) {
         cleanWinners();
         winnersTittle("No winners in the last session");

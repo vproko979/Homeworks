@@ -6,7 +6,6 @@ const winnersList = document.getElementById("winners-list");
 let port = "50046";
 
 winnersButton.addEventListener("click", () => {
-    console.log("Winners btn was clicked");
     document.getElementById("main").style.display = "none";
     getTheWinnersList();
 });
